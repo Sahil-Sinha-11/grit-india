@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neon-black text-white;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .neon-text {
+    @apply text-white font-display tracking-wider;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
+                 0 0 10px rgba(247, 37, 133, 0.8), 
+                 0 0 15px rgba(247, 37, 133, 0.6);
+  }
+  
+  .neon-text-blue {
+    @apply text-white font-display tracking-wider;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
+                 0 0 10px rgba(76, 201, 240, 0.8), 
+                 0 0 15px rgba(76, 201, 240, 0.6);
+  }
+  
+  .neon-button {
+    @apply inline-block py-3 px-8 bg-transparent text-white font-display font-bold tracking-wider uppercase text-lg border-2 relative z-10 overflow-hidden transition-all duration-300;
+    border-color: rgba(247, 37, 133, 0.8);
+    box-shadow: 0 0 10px rgba(247, 37, 133, 0.5), 
+                inset 0 0 10px rgba(247, 37, 133, 0.5);
+  }
+  
+  .neon-button:hover {
+    @apply text-neon-black;
+    background-color: rgba(247, 37, 133, 0.9);
+    box-shadow: 0 0 20px rgba(247, 37, 133, 0.8), 
+                inset 0 0 20px rgba(247, 37, 133, 0.4);
+  }
+  
+  .neon-button-blue {
+    @apply inline-block py-3 px-8 bg-transparent text-white font-display font-bold tracking-wider uppercase text-lg border-2 relative z-10 overflow-hidden transition-all duration-300;
+    border-color: rgba(76, 201, 240, 0.8);
+    box-shadow: 0 0 10px rgba(76, 201, 240, 0.5), 
+                inset 0 0 10px rgba(76, 201, 240, 0.5);
+  }
+  
+  .neon-button-blue:hover {
+    @apply text-neon-black;
+    background-color: rgba(76, 201, 240, 0.9);
+    box-shadow: 0 0 20px rgba(76, 201, 240, 0.8), 
+                inset 0 0 20px rgba(76, 201, 240, 0.4);
+  }
+  
+  .glass-card {
+    @apply bg-opacity-20 bg-neon-deepBlue backdrop-blur-md border border-neon-purple border-opacity-20 rounded-lg shadow-lg;
+  }
+  
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-8 relative;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+}
+
+.lineup-image:hover .artist-overlay {
+  opacity: 1;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}

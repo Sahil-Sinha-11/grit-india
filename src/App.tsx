@@ -20,7 +20,7 @@ function App() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.2 }}
       >
         <main>
           <Hero />

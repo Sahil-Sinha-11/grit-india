@@ -5,8 +5,8 @@ import { Music, Zap, Users, Beer } from 'lucide-react';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
+    triggerOnce: true,
+    threshold: 0.1,
   });
 
   const featureItems = [
@@ -52,14 +52,14 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-b from-neon-black to-neon-deepBlue">
+    <section id="about" className="py-12 md:py-20 bg-gradient-to-b from-neon-black to-neon-deepBlue">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-4xl mx-auto text-center mb-8 md:mb-16"
         >
           <motion.h2 variants={itemVariants} className="section-heading neon-text">
             ABOUT THE EVENT

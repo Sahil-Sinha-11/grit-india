@@ -1,5 +1,6 @@
 {
   "name": "pubfest-2025",
+  "homepage": "https://sahil-sinha-11.github.io/grit-india/",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^11.0.8",
